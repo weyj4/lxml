@@ -273,10 +273,10 @@ class Schematron(_etree._Validator):
             schematron = self._include(schematron, **include_params)
         if expand:
             schematron = self._expand(schematron, **expand_params)
-        if not schematron_schema_valid(schematron):
-            raise _etree.SchematronParseError(
-                "invalid schematron schema: %s" %
-                schematron_schema_valid.error_log)
+##        if not schematron_schema_valid(schematron):
+##            raise _etree.SchematronParseError(
+##                "invalid schematron schema: %s" %
+##                schematron_schema_valid.error_log)
         if store_schematron:
             self._schematron = schematron
         # add new compile keyword args here if exposing them
